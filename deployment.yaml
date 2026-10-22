@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: factory-monitor-deployment
+spec:
+  replicas: 2 # Run 2 copies of our app at the same time so if one crashes, the website stays up!
+  selector:
+    matchLabels:
+      app: factory-monitor
+  template:
+    metadata:
+      labels:
+        app: factory-monitor
+    spec:
+      containers:
+      - name: monitor-app
+        image: nginx:alpine # For this basic test, we tell it to use the Nginx server
+        ports:
+        - containerPort: 80
