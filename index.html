@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factory Monitoring</title>
+    <!-- Simple styling to make it look clean -->
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f2f5; padding: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align: left; }
+        th { background: #333; color: white; }
+        .warning { color: red; font-weight: bold; background-color: #ffcccc; padding: 4px; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Industrial Equipment Status</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Machine ID</th>
+                    <th>Production Unit</th>
+                    <th>Operating Hours</th>
+                    <th>Temp (°C)</th>
+                    <th>Vibration (mm/s)</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Machine 1 -->
+                <tr>
+                    <td>MCH-001</td>
+                    <td>Assembly</td>
+                    <td>1,200 hrs</td>
+                    <td>72°C</td>
+                    <td>3.1 mm/s</td>
+                    <td>Operational</td>
+                </tr>
+                <!-- Machine 2 (CRITICAL TEMP WARNING) -->
+                <tr>
+                    <td>MCH-002</td>
+                    <td>Packaging</td>
+                    <td>3,400 hrs</td>
+                    <td class="warning">85°C (TOO HOT!)</td>
+                    <td>4.2 mm/s</td>
+                    <td>Needs Maintenance</td>
+                </tr>
+                <!-- Machine 3 -->
+                <tr>
+                    <td>MCH-003</td>
+                    <td>Machining</td>
+                    <td>850 hrs</td>
+                    <td>65°C</td>
+                    <td>1.8 mm/s</td>
+                    <td>Operational</td>
+                </tr>
+                <!-- Machine 4 (CRITICAL VIBRATION WARNING) -->
+                <tr>
+                    <td>MCH-004</td>
+                    <td>Assembly</td>
+                    <td>4,100 hrs</td>
+                    <td>78°C</td>
+                    <td class="warning">8.5 mm/s (HIGH VIBRATION!)</td>
+                    <td>Needs Maintenance</td>
+                </tr>
+                <!-- Machine 5 -->
+                <tr>
+                    <td>MCH-005</td>
+                    <td>Machining</td>
+                    <td>2,300 hrs</td>
+                    <td>70°C</td>
+                    <td>2.4 mm/s</td>
+                    <td>Operational</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
